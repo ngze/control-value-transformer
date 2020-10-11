@@ -1,7 +1,7 @@
 {
   "name": "@ngze/control-value-transformer",
   "version": "1.0.0",
-  "description": "Reactivating Angular lifecycle hooks! 🚀",
+  "description": "",
   "license": "MIT",
   "sideEffects": false,
   "homepage": "https://github.com/ngze/control-value-transformer#readme",
@@ -19,14 +19,19 @@
     "Zeev Katz"
   ],
   "keywords": [
-    "Control Value Transformer",
-    "Reactive hooks",
+    "Control value transformer",
+    "Control value accessor",
+    "Angular forms",
+    "Angular form",
+    "Angular reactive forms",
+    "Angular reactive form",
+    "ng-model",
+    "Form controls",
     "Angular",
-    "Angular lifecycle hooks",
-    "Lifecycle hooks",
-    "RxJS lifecycle hooks",
-    "Reactive",
-    "Reactive programming"
+    "Transformers",
+    "Value transformers",
+    "Forms",
+    "Controls"
   ],
   "peerDependencies": {
     "@angular/common": "^10.0.9",
