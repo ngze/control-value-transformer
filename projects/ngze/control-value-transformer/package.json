@@ -1,0 +1,44 @@
+{
+  "name": "@ngze/control-value-transformer",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "sideEffects": false,
+  "homepage": "https://github.com/ngze/control-value-transformer#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngze/control-value-transformer"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/ngze/control-value-transformer/issue"
+  },
+  "maintainers": [
+    "Zeev Katz"
+  ],
+  "keywords": [
+    "Control value transformer",
+    "Control value accessor",
+    "Angular forms",
+    "Angular form",
+    "Angular reactive forms",
+    "Angular reactive form",
+    "ng-model",
+    "Form controls",
+    "Angular",
+    "Transformers",
+    "Value transformers",
+    "Forms",
+    "Controls"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^10.0.9",
+    "@angular/core": "^10.0.9",
+    "rxjs": ">=6.4.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
