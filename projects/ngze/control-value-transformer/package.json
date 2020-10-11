@@ -1,0 +1,39 @@
+{
+  "name": "@ngze/control-value-transformer",
+  "version": "1.0.0",
+  "description": "Reactivating Angular lifecycle hooks! 🚀",
+  "license": "MIT",
+  "sideEffects": false,
+  "homepage": "https://github.com/ngze/control-value-transformer#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngze/control-value-transformer"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/ngze/control-value-transformer/issue"
+  },
+  "maintainers": [
+    "Zeev Katz"
+  ],
+  "keywords": [
+    "Control Value Transformer",
+    "Reactive hooks",
+    "Angular",
+    "Angular lifecycle hooks",
+    "Lifecycle hooks",
+    "RxJS lifecycle hooks",
+    "Reactive",
+    "Reactive programming"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^10.0.9",
+    "@angular/core": "^10.0.9",
+    "rxjs": ">=6.4.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

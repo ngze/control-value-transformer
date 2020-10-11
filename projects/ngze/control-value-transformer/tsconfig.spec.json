@@ -1,0 +1,11 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../../out-tsc/spec",
+    "module": "commonjs",
+    "types": ["jest", "node"]
+  },
+  "files": ["src/test-setup.ts"],
+  "include": ["src/test/**/*.spec.ts", "src/test/**/*.d.ts"]
+}
