@@ -1,7 +1,7 @@
 <br />
 
 <p align="center">
-<img width="150px" src="./logo.svg">
+<img width="175px" src="./logo.svg">
 </p>
 
 <br />
@@ -13,7 +13,7 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 
-> 🤖⚡ A seamless way to transform ControlValueAccessor values in two-ways.  
+> A seamless way to transform ControlValueAccessor values in two-ways.  
 
 ## Features
 
