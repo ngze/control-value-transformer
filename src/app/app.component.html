@@ -1,0 +1,10 @@
+<div>
+  <textarea [(ngModel)]="html" [controlValueTransformer]="'html-to-markdown'"></textarea>
+  <div [innerHTML]="html"></div>
+</div>
+<br />
+<br />
+<div>
+  <input [(ngModel)]="password" [controlValueTransformer]="'emoji-password'" [transformOnChange]="true" />
+  <div>{{ password }}</div>
+</div>
