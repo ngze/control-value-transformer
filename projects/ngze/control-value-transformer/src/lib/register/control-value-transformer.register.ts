@@ -9,7 +9,7 @@ import { ControlValueTransformerRegisterImpl } from './control-value-transformer
  */
 @Injectable({
   providedIn: 'root',
-  useClass: ControlValueTransformerRegisterImpl,
+  useExisting: ControlValueTransformerRegisterImpl,
 })
 export abstract class ControlValueTransformerRegister {
   /**

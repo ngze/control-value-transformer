@@ -1,3 +1,5 @@
+import { Injectable } from '@angular/core';
+
 import { getTransformerMetadata } from '../metadata';
 import { Transformer } from '../shared';
 
@@ -6,6 +8,9 @@ import { ControlValueTransformerRegister } from './control-value-transformer.reg
 /**
  * Implementation of {@link ControlValueTransformerRegister}.
  */
+@Injectable({
+  providedIn: 'root',
+})
 export class ControlValueTransformerRegisterImpl implements ControlValueTransformerRegister {
   /**
    * Map between control value transformer name and its related implementation instance.
