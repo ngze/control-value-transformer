@@ -10,3 +10,4 @@ export {
   getControlValueTransformerMetadata,
 } from './lib/metadata';
 export { Transformer } from './lib/shared';
+export { ControlValueTransformerRegister } from './lib/register';
