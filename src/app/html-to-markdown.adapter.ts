@@ -1,12 +1,12 @@
 import * as showdown from 'showdown';
 import * as turndown from 'turndown';
 
-import { ControlValueTransformer, Transformer } from '@ngze/control-value-transformer';
+import { ControlValueAdapter, Adapter } from '@ngze/control-value-adapter';
 
-@ControlValueTransformer({
+@ControlValueAdapter({
   name: 'html-to-markdown',
 })
-export class HtmlToMarkdownTransformer implements Transformer<string, string> {
+export class HtmlToMarkdownAdapter implements Adapter<string, string> {
   private readonly turndown = new turndown.default();
   private readonly showdown = new showdown.Converter();
 

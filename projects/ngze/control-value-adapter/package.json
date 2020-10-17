@@ -1,25 +1,25 @@
 {
-  "name": "@ngze/control-value-transformer",
+  "name": "@ngze/control-value-adapter",
   "version": "1.0.0",
-  "description": "A seamless way to transform ControlValueAccessor values in two-ways",
+  "description": "",
   "license": "MIT",
   "sideEffects": false,
-  "homepage": "https://github.com/ngze/control-value-transformer#readme",
+  "homepage": "https://github.com/ngze/control-value-adapter#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngze/control-value-transformer"
+    "url": "https://github.com/ngze/control-value-adapter"
   },
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/ngze/control-value-transformer/issue"
+    "url": "https://github.com/ngze/control-value-adapter/issue"
   },
   "maintainers": [
     "Zeev Katz"
   ],
   "keywords": [
-    "Control value transformer",
+    "Control value adapter",
     "Control value accessor",
     "Angular forms",
     "Angular form",
@@ -28,8 +28,8 @@
     "ng-model",
     "Form controls",
     "Angular",
-    "Transformers",
-    "Value transformers",
+    "Adapters",
+    "Value adapters",
     "Forms",
     "Controls"
   ],

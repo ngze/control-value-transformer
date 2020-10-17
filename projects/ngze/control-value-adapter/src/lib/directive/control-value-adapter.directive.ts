@@ -1,34 +1,28 @@
 import { Directive, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { NgControl } from '@angular/forms';
 
-import { ControlValueTransformerRegister } from '../register';
-import { Transformer } from '../shared';
+import { ControlValueAdapterRegister } from '../register';
+import { Adapter } from '../shared';
 
 /**
- * The control value transformer directive allows to supply different value type to components that implements
+ * The control value adapter directive allows to supply different value type to components that implements
  * `ControlValueAccessor` by transforming value in two-ways, before writing new value and after value change.
  */
 @Directive({
-  selector: '[formControl][controlValueTransformer], [ngModel][controlValueTransformer]',
+  selector: '[formControl][controlValueAdapter], [ngModel][controlValueAdapter]',
 })
-export class ControlValueTransformerDirective<S, T> implements OnChanges {
+export class ControlValueAdapterDirective<S, T> implements OnChanges {
   /**
-   * Control value transformer name.
+   * Control value adapter name.
    */
   // eslint-disable-next-line @angular-eslint/no-input-rename
-  @Input('controlValueTransformer')
-  readonly controlValueTransformerName: string;
+  @Input('controlValueAdapter')
+  readonly controlValueAdapterName: string;
 
   /**
-   * Indicates if the control value should be re-transformed after `onChange`.
+   * Emits {@link Adapter<S, T>} on {@link controlValueAdapterName} changes.
    */
-  @Input()
-  readonly transformOnChange: boolean;
-
-  /**
-   * Emits {@link Transformer<S, T>} on {@link controlValueTransformerName} changes.
-   */
-  controlValueTransformer: Transformer<S, T>;
+  controlValueAdapter: Adapter<S, T>;
 
   /**
    * Reference to the current incoming source value.
@@ -47,17 +41,18 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
 
   constructor(
     private readonly ngControl: NgControl,
-    private readonly controlValueTransformerRegister: ControlValueTransformerRegister
+    private readonly controlValueAdapterRegister: ControlValueAdapterRegister
   ) {
     this.ngControl.valueAccessor.registerOnChange = this.registerOnChange;
     this.ngControl.valueAccessor.writeValue = this.writeValue;
   }
 
-  ngOnChanges({ controlValueTransformerName }: SimpleChanges) {
-    if (controlValueTransformerName) {
-      this.controlValueTransformer = this.controlValueTransformerRegister.resolve(
-        this.controlValueTransformerName
-      ) as Transformer<S, T>;
+  ngOnChanges({ controlValueAdapterName }: SimpleChanges) {
+    if (controlValueAdapterName) {
+      this.controlValueAdapter = this.controlValueAdapterRegister.resolve(this.controlValueAdapterName) as Adapter<
+        S,
+        T
+      >;
     }
   }
 
@@ -67,14 +62,10 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
    */
   registerOnChange = (onChange: (sourceValue: S) => void) => {
     this.originalRegisterOnChange.call(this.ngControl.valueAccessor, (targetValue: T) => {
-      if (this.controlValueTransformer) {
-        const sourceValue = this.controlValueTransformer.toSource(targetValue, this.currentSourceValue);
-
-        if (this.transformOnChange) {
-          this.writeValue(sourceValue);
-        }
-
+      if (this.controlValueAdapter) {
+        const sourceValue = this.controlValueAdapter.toSource(targetValue, this.currentSourceValue);
         onChange(sourceValue);
+        this.writeValue(sourceValue);
       }
     });
   };
@@ -83,9 +74,9 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
    * Transforms the provided source value to the target value type and than call the original `writeValue` implementation.
    */
   writeValue = (sourceValue: S) => {
-    if (this.controlValueTransformer) {
+    if (this.controlValueAdapter) {
       this.currentSourceValue = sourceValue;
-      const targetValue = this.controlValueTransformer.toTarget(sourceValue);
+      const targetValue = this.controlValueAdapter.toTarget(sourceValue);
       this.originalWriteValue.call(this.ngControl.valueAccessor, targetValue);
     }
   };

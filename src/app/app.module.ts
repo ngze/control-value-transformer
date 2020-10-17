@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ControlValueTransformerModule } from '@ngze/control-value-transformer';
+import { ControlValueAdapterModule } from '@ngze/control-value-adapter';
 
 import { AppComponent } from './app.component';
 
-import { HtmlToMarkdownTransformer } from './html-to-markdown.transformer';
-import { PasswordToEmojiTransformer } from './password-to-emoji.transformer';
+import { HtmlToMarkdownAdapter } from './html-to-markdown.adapter';
+import { PasswordToEmojiAdapter } from './password-to-emoji.adapter';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +15,7 @@ import { PasswordToEmojiTransformer } from './password-to-emoji.transformer';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    ControlValueTransformerModule.registerTransformers([HtmlToMarkdownTransformer, PasswordToEmojiTransformer]),
+    ControlValueAdapterModule.registerAdapters([HtmlToMarkdownAdapter, PasswordToEmojiAdapter]),
   ],
   bootstrap: [AppComponent],
 })

@@ -6,7 +6,7 @@
 
 <br />
 
-[![codecov](https://codecov.io/gh/ngze/control-value-transformer/branch/develop/graph/badge.svg)](https://codecov.io/gh/ngze/control-value-transformer)
+[![codecov](https://codecov.io/gh/ngze/control-value-adapter/branch/develop/graph/badge.svg)](https://codecov.io/gh/ngze/control-value-adapter)
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)]()
 [![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
@@ -21,13 +21,13 @@
 
 ```
 # Using ng
-ng add @ngze/control-value-transformer
+ng add @ngze/control-value-adapter
 
 # Using yarn
-yarn add @ngze/control-value-transformer
+yarn add @ngze/control-value-adapter
 
 # Using npm
-npm i @ngze/control-value-transformer
+npm i @ngze/control-value-adapter
 ```
 
 ### Usage
@@ -41,7 +41,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://il.linkedin.com/in/zeev-katz"><img src="https://avatars0.githubusercontent.com/u/21024245?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zeev Katz</b></sub></a><br /><a href="https://github.com/@ngze/control-value-transformer/commits?author=ZeevKatz" title="Code"> 💻 </a> <a href="https://github.com/@ngze/control-value-transformer/commits?author=ZeevKatz" title="Documentation"> 📖 </a> <a href="#ideas-ZeevKatz" title="Ideas, Planning, & Feedback"> 🤔 </a> <a href="#maintenance-ZeevKatz" title="Maintenance"> 🚧 </a></td>
+    <td align="center"><a href="https://il.linkedin.com/in/zeev-katz"><img src="https://avatars0.githubusercontent.com/u/21024245?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zeev Katz</b></sub></a><br /><a href="https://github.com/@ngze/control-value-adapter/commits?author=ZeevKatz" title="Code"> 💻 </a> <a href="https://github.com/@ngze/control-value-adapter/commits?author=ZeevKatz" title="Documentation"> 📖 </a> <a href="#ideas-ZeevKatz" title="Ideas, Planning, & Feedback"> 🤔 </a> <a href="#maintenance-ZeevKatz" title="Maintenance"> 🚧 </a></td>
   </tr>
 </table>
 

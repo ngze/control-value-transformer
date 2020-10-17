@@ -1,9 +1,9 @@
-import { ControlValueTransformer, Transformer } from '@ngze/control-value-transformer';
+import { ControlValueAdapter, Adapter } from '@ngze/control-value-adapter';
 
-@ControlValueTransformer({
+@ControlValueAdapter({
   name: 'emoji-password',
 })
-export class PasswordToEmojiTransformer implements Transformer<string, string> {
+export class PasswordToEmojiAdapter implements Adapter<string, string> {
   private readonly emojis = ['🤫', '🤐', '😷', '😑', '😶', '🤭'];
 
   toTarget(password: string): string {

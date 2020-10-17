@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/ngze/control-value-transformer",
+  "dest": "../../../dist/ngze/control-value-adapter",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

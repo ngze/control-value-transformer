@@ -1,9 +1,9 @@
 /**
- * Interface that represents value transformer.
+ * Interface that represents value adapter.
  * `S` - Source value type.
  * `T` - Target value type.
  */
-export interface Transformer<S = unknown, T = unknown> {
+export interface Adapter<S = unknown, T = unknown> {
   /**
    * Transforms the given source value (`S`) to the target value type (`T`).
    */

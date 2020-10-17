@@ -14,10 +14,10 @@
       "path": "./tsconfig.spec.json"
     },
     {
-      "path": "./projects/ngze/control-value-transformer/tsconfig.lib.json"
+      "path": "./projects/ngze/control-value-adapter/tsconfig.lib.json"
     },
     {
-      "path": "./projects/ngze/control-value-transformer/tsconfig.spec.json"
+      "path": "./projects/ngze/control-value-adapter/tsconfig.spec.json"
     }
   ]
 }

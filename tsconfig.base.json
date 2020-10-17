@@ -13,7 +13,7 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
-      "@ngze/control-value-transformer": ["projects/ngze/control-value-transformer/src/public-api.ts"]
+      "@ngze/control-value-adapter": ["projects/ngze/control-value-adapter/src/public-api.ts"]
     }
   }
 }
