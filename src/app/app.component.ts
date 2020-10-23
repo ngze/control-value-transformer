@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PrefixTransformer } from './prefix.transformer';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   html: string;
   password: string;
+  number: number;
+  url: string;
+  httpsPrefixTransformer = new PrefixTransformer('https://');
 }
