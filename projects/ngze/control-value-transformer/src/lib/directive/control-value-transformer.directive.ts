@@ -20,13 +20,14 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
   readonly controlValueTransformerOrName: string | Transformer<S, T>;
 
   /**
-   * Indicates if the value should be re-written after each `onChange` call.
+   * Indicates if `writeValue` should be called with the transformed value after each `onChange` call.
+   * @defaultValue true
    */
   @Input()
   readonly rewriteValueOnChange = true;
 
   /**
-   * Control value transformer that resolved by {@link controlValueTransformerName}.
+   * Control value transformer that resolved by {@link controlValueTransformerOrName}.
    */
   controlValueTransformer: Transformer<S, T>;
 
