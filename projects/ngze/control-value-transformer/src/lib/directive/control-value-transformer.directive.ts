@@ -13,11 +13,11 @@ import { Transformer } from '../shared';
 })
 export class ControlValueTransformerDirective<S, T> implements OnChanges {
   /**
-   * Control value transformer name.
+   * Control value transformer instance or its name.
    */
   // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('controlValueTransformer')
-  readonly controlValueTransformerName: string;
+  readonly controlValueTransformerOrName: string | Transformer<S, T>;
 
   /**
    * Indicates if the value should be re-written after each `onChange` call.
@@ -53,9 +53,12 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
     this.ngControl.valueAccessor.writeValue = this.writeValue;
   }
 
-  ngOnChanges({ controlValueTransformerName }: SimpleChanges) {
-    if (controlValueTransformerName) {
-      this.controlValueTransformer = this.controlValueTransformerRegister.resolve(this.controlValueTransformerName);
+  ngOnChanges({ controlValueTransformerOrName }: SimpleChanges) {
+    if (controlValueTransformerOrName) {
+      this.controlValueTransformer =
+        typeof this.controlValueTransformerOrName === 'string'
+          ? this.controlValueTransformerRegister.resolve(this.controlValueTransformerOrName)
+          : this.controlValueTransformerOrName;
     }
   }
 
