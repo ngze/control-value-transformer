@@ -12,5 +12,5 @@ export interface Transformer<S = unknown, T = unknown> {
   /**
    * Transforms the given target value (`T`) to the source value type (`S`).
    */
-  toSource: (targetValue: T, currentSourceValue: S) => S;
+  toSource: (targetValue: T) => S;
 }

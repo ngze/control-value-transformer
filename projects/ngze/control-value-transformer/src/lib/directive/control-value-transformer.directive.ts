@@ -31,11 +31,6 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
   controlValueTransformer: Transformer<S, T>;
 
   /**
-   * Reference to the current incoming source value.
-   */
-  currentSourceValue: S;
-
-  /**
    * The original implementations of {@link ngControl.valueAccessor.writeValue}.
    */
   private readonly originalWriteValue = this.ngControl.valueAccessor.writeValue;
@@ -69,7 +64,7 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
   registerOnChange = (onChange: (sourceValue: S) => void) => {
     this.originalRegisterOnChange.call(this.ngControl.valueAccessor, (targetValue: T) => {
       if (this.controlValueTransformer) {
-        const sourceValue = this.controlValueTransformer.toSource(targetValue, this.currentSourceValue);
+        const sourceValue = this.controlValueTransformer.toSource(targetValue);
 
         if (this.rewriteValueOnChange) {
           this.writeValue(sourceValue);
@@ -85,7 +80,6 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
    */
   writeValue = (sourceValue: S) => {
     if (this.controlValueTransformer) {
-      this.currentSourceValue = sourceValue;
       const targetValue = this.controlValueTransformer.toTarget(sourceValue);
       this.originalWriteValue.call(this.ngControl.valueAccessor, targetValue);
     }
