@@ -23,7 +23,7 @@ export class ControlValueTransformerDirective<S, T> implements OnChanges {
    * Indicates if the value should be re-written after each `onChange` call.
    */
   @Input()
-  readonly rewriteValueOnChange: boolean;
+  readonly rewriteValueOnChange = true;
 
   /**
    * Control value transformer that resolved by {@link controlValueTransformerName}.
