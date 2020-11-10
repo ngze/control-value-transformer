@@ -2,25 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## 1.0.0 (2020-08-30)
+## 1.0.0 (2020-11-10)
 
 
 ### Features
 
-* 🎸 add enum for lifecycle hooks ([0cd644c](https://github.com/ngze/control-value-transformer/commit/0cd644cdde55f502bcc9f10865829345aaeddebe))
-* 🎸 add interface for lifecycle hook configurations ([ea9ea98](https://github.com/ngze/control-value-transformer/commit/ea9ea9833f0c6944adeb0fc99f0d8430e82b9e31))
-* 🎸 add lifecycle hooks configurations ([377b08c](https://github.com/ngze/control-value-transformer/commit/377b08c5e77bcf8a35a63b4f532fb0271ff28bad))
-* 🎸 expose Hook enum and ReactiveHook decorator ([1de922b](https://github.com/ngze/control-value-transformer/commit/1de922b8b441324d73d4c32a5eadb72548352f4c))
-* 🎸 implement reactive hook decorator ([6b453cf](https://github.com/ngze/control-value-transformer/commit/6b453cf532001376fe84593197bb06cc2fbd9ce0))
-* 🎸 use ReactiveHook in demo app for testing ([2e45628](https://github.com/ngze/control-value-transformer/commit/2e4562830d813eb409edc82eb1d80a168837152e))
-
-
-### Bug Fixes
-
-* 🐛 use regular function for AOT support ([5f9be0c](https://github.com/ngze/control-value-transformer/commit/5f9be0cc7854665aa23d1ec9efa1ddeb324e897b))
-
-
-### Tests
-
-* 💍 add empty test for ReactiveHook decorator ([23ce831](https://github.com/ngze/control-value-transformer/commit/23ce831db5e95351beffd5c00bee2609b8a1862f))
-* 💍 add unit tests for internals functions ([de7bcf2](https://github.com/ngze/control-value-transformer/commit/de7bcf27f6ddcda6e618aafaa4c245b27f495246))
+* 🎸 add default value for rewriteValueOnChange ([1a66282](https://github.com/ngze/control-value-transformer/commit/1a66282eb646f4103ce1635506fe38e821a5d40e))
+* 🎸 add more examples ([dc00a74](https://github.com/ngze/control-value-transformer/commit/dc00a74b9e0bdf378cf6ed6e9d7140ebeba8cf3f))
+* 🎸 add usage examples to the demo application ([42614bd](https://github.com/ngze/control-value-transformer/commit/42614bd60d5711fb895fab2806483edc467b900f))
+* 🎸 implement control value transformer directive ([6a56ceb](https://github.com/ngze/control-value-transformer/commit/6a56ceb64cde98bf1b02f28ca417e47f1ecba099))
+* 🎸 implement control value transformer metadata decorator ([0e8a63a](https://github.com/ngze/control-value-transformer/commit/0e8a63aa5793374d727cb3c7c8454f8b11e374b7))
+* 🎸 implement registration service for transformers ([7ffc455](https://github.com/ngze/control-value-transformer/commit/7ffc4555a3954c2b2435359be1a38e489d84c0e5))
+* 🎸 remove current source value ([8662b55](https://github.com/ngze/control-value-transformer/commit/8662b552a452d9be8d422e4de7f37cc6d9547804))
+* 🎸 source values could be null ([6e3a2ea](https://github.com/ngze/control-value-transformer/commit/6e3a2ea9f0a3300c75903880246088748a15b0a0))
+* 🎸 support receiving transformer instance or name ([fef0d54](https://github.com/ngze/control-value-transformer/commit/fef0d54b69ca3791eac648adbb31092a9136b6f4))
+* 🎸 support registration of new transformers via module ([1157d71](https://github.com/ngze/control-value-transformer/commit/1157d71e0d58a5baef2cc8ecb76dcd7ef318c34c))
