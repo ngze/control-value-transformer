@@ -1,6 +1,6 @@
 {
   "name": "control-value-transformer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -27,7 +27,6 @@
     "@angular/platform-browser-dynamic": "~10.0.9",
     "@angular/router": "~10.0.9",
     "@ngneat/lib": "^1.0.4",
-    "ngx-take-until-destroy": "^5.4.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -67,7 +66,6 @@
     "ng-packagr": "^10.0.0",
     "prettier": "^2.0.5",
     "protractor": "~7.0.0",
-    "runes": "^0.4.3",
     "showdown": "^1.9.1",
     "standard-version": "^8.0.1",
     "ts-node": "~8.3.0",

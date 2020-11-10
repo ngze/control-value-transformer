@@ -1,0 +1,22 @@
+<div>
+  <textarea [(ngModel)]="html" [controlValueTransformer]="'html-to-markdown'" [rewriteValueOnChange]="false"></textarea>
+  <div [innerHTML]="html"></div>
+</div>
+<br />
+<br />
+<div>
+  <input [(ngModel)]="password" [controlValueTransformer]="'emoji-password'" />
+  <div>{{ password }}</div>
+</div>
+<br />
+<br />
+<div>
+  <input [(ngModel)]="url" [controlValueTransformer]="httpsPrefixTransformer" />
+  <div>{{ url }}</div>
+</div>
+<br />
+<br />
+<div>
+  <input [(ngModel)]="number" [controlValueTransformer]="'number'" />
+  <div>{{ number }}</div>
+</div>
