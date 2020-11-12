@@ -2,8 +2,6 @@
  * Public API Surface of Control Value Transformer
  */
 
-import 'reflect-metadata';
-
 export {
   ControlValueTransformer,
   ControlValueTransformerMetadata,

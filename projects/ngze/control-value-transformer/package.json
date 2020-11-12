@@ -1,6 +1,6 @@
 {
   "name": "@ngze/control-value-transformer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A proper way for transforming ControlValueAccessor values in two-ways",
   "license": "MIT",
   "sideEffects": false,
