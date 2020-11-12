@@ -8,7 +8,7 @@ import { Transformer } from './shared';
 /**
  * Injection token that used to run {@link registerControlValueTransformers}.
  */
-export const REGISTER_CONTROL_VALUE_TRANSFORMERS = new InjectionToken<void>('REGISTER_CONTROL_VALUE_TRANSFORMERS');
+export const REGISTER_CONTROL_VALUE_TRANSFORMERS = new InjectionToken('REGISTER_CONTROL_VALUE_TRANSFORMERS');
 
 /**
  * Registration factory for new control value transformers.
@@ -52,5 +52,5 @@ export class ControlValueTransformerModule {
     };
   }
 
-  constructor(@Optional() @Inject(REGISTER_CONTROL_VALUE_TRANSFORMERS) registerControlValueTransformers: void) {}
+  constructor(@Optional() @Inject(REGISTER_CONTROL_VALUE_TRANSFORMERS) registerControlValueTransformers) {}
 }

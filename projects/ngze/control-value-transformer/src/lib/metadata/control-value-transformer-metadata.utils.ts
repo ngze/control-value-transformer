@@ -10,13 +10,20 @@ import { ControlValueTransformerMetadata } from './control-value-transformer-met
 const CONTROL_VALUE_TRANSFORMER_METADATA = Symbol('CONTROL_VALUE_TRANSFORMER_METADATA');
 
 /**
+ * Returns metadata property descriptor associate with the given control value transformer.
+ * @param transformer - Instance of control value transformer that should be decorated.
+ * @returns Transformer metadata property descriptor.
+ */
+const getTransformerMetadataPropertyDescriptor = (transformer: Transformer) => {
+  return Object.getOwnPropertyDescriptor(transformer.constructor, CONTROL_VALUE_TRANSFORMER_METADATA);
+};
+
+/**
  * Asserts the given transformer class is decorated with {@link Transformer}.
  * @param transformer - Instance of control value transformer that should be decorated.
  */
 const assertTransformerIsDecorated = (transformer: Transformer) => {
-  const hasMetadata = Reflect.hasMetadata(CONTROL_VALUE_TRANSFORMER_METADATA, transformer.constructor);
-
-  if (!hasMetadata) {
+  if (!getTransformerMetadataPropertyDescriptor(transformer)) {
     throw new TypeError(`"${transformer.constructor}" is not decorated with ControlValueTransformer.`);
   }
 };
@@ -28,8 +35,8 @@ const assertTransformerIsDecorated = (transformer: Transformer) => {
  */
 export const getControlValueTransformerMetadata = (transformer: Transformer): ControlValueTransformerMetadata => {
   assertTransformerIsDecorated(transformer);
-
-  return Reflect.getMetadata(CONTROL_VALUE_TRANSFORMER_METADATA, transformer.constructor);
+  const metadataPropertyDescriptor = getTransformerMetadataPropertyDescriptor(transformer);
+  return metadataPropertyDescriptor.value;
 };
 
 /**
@@ -41,5 +48,7 @@ export const definedControlValueTransformerMetadata = (
   transformerClass: Class<Transformer>,
   metadata: ControlValueTransformerMetadata
 ) => {
-  return Reflect.defineMetadata(CONTROL_VALUE_TRANSFORMER_METADATA, metadata, transformerClass);
+  return Object.defineProperty(transformerClass, CONTROL_VALUE_TRANSFORMER_METADATA, {
+    value: metadata,
+  });
 };
