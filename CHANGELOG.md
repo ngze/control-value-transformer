@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.1.0 (2020-11-12)
+
+
+### Features
+
+* 🎸 get rid of reflect-metadata ([d7056b5](https://github.com/ngze/control-value-transformer/commit/d7056b5e837bb4a392e32dcd0a07527cc13c1304))
+
 ## 1.0.0 (2020-11-10)
 
 
